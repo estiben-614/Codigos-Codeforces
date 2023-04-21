@@ -1,0 +1,27 @@
+const readline = require('readline');
+const { stdin: input, stdout: output } = require('process');
+
+const rl = readline.createInterface({ input, output });
+
+let contLuckyNumber=0
+rl.question('',(answer)=>{
+    //Convertimos el numero en string
+    numberString=answer.toString()
+
+    for (i in  numberString){
+        if(numberString[i]=='4' || numberString[i]=='7'){
+            contLuckyNumber+=1
+        }
+    }   
+
+
+    if(contLuckyNumber==4  || contLuckyNumber==7){
+        console.log('YES')
+    }
+    else{
+        console.log('NO')
+    }
+    rl.close()
+
+    
+})
